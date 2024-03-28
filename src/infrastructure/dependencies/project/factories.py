@@ -7,6 +7,9 @@ from motor.core import AgnosticClientSession
 from time_sheet.src.adapters.modules.project.repositories.project_repository import (
     ProjectRepository,
 )
+from time_sheet.src.application.modules.project.mapper.project_dto_to_get_mapper import (
+    ProjectDTOToGetMapper,
+)
 from time_sheet.src.application.modules.project.mapper.project_dto_to_with_owner_mapper import (
     ProjectDTOToWithOwnerMapper,
 )
@@ -52,6 +55,10 @@ from time_sheet.src.infrastructure.dependencies.user.factories import (
 
 def get_project_dto_to_with_owner_mapper() -> ProjectDTOToWithOwnerMapper:
     return ProjectDTOToWithOwnerMapper()
+
+
+def get_project_dto_to_get_mapper() -> ProjectDTOToGetMapper:
+    return ProjectDTOToGetMapper()
 
 
 def get_project_repository(

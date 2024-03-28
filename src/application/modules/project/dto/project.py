@@ -16,6 +16,11 @@ class ProjectUpdateDTO(ProjectBaseDTO):
     pass
 
 
+class ProjectGetDTO(ProjectBaseDTO):
+    id: str
+    owner: UserGetDTO | None = None
+
+
 class ProjectWithOwnerDTO(ProjectBaseDTO):
     id: str
     owner: UserGetDTO | None = None
